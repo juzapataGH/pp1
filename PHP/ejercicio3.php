@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <?php
+        $pais=
+        [
+            "espana"=>
+            [
+            "nombre"=>"España",
+            "lengua"=>"Castellano",
+            "moneda"=>"Euro"
+            ],
+        "usa"=>
+        [
+          "nombre"=>"USA",
+          "lengua"=>"Ingles",
+          "moneda"=>"Dolar"  
+        ],
+        ];
+    echo $pais["espana"]["moneda"]
+        ?>
+</body>
+</html>
