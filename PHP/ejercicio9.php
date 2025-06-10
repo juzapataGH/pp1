@@ -1,6 +1,7 @@
 <hmtl>
     <body>
         <?php
+            validar($nombre,$apellido);
         echo " Nombre: " . $_POST["nombre"] . "<br>";
         echo " Apellido: " . $_POST["apellido"] . "<br>";
         echo " Sexo: " . $_POST["sexo"] . "<br>";
@@ -12,7 +13,7 @@
         if (isset($_POST["acepto"]))
             echo "<p>He leido y acepto las condiciones generales</p>";
         else
-            echo "<p>No he leido ni acepto las condiciones generales</p>";
+            echo "<p>No he leido ni acepto las condiciones generales</p>";}
         ?>
 </body>
 </hmtl>
