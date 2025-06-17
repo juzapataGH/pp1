@@ -1,0 +1,13 @@
+<html>
+    <body>
+    <ul>
+        {%for clave, datos in paises%}
+        <li>
+            NOMBRE: {{datos.nombre}}<br>
+            MONEDA: {{datos.moneda}}<br>
+            LENGUA: {{datos.lengua}}<br>
+        </li>
+        {%endfor%}
+        </ul>
+    </body>
+</hmtl>

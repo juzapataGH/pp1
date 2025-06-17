@@ -17,7 +17,7 @@
                     return $this->butacas_ocupadas;
                 }
                 public function ocuparButacas($cantidad){
-                    if (($cantidad+$this->butacas_ocupadas)<$this->cant_butacas)
+                    if (($cantidad+$this->butacas_ocupadas)<=$this->cant_butacas)
                     $this->butacas_ocupadas=$this->butacas_ocupadas+$cantidad;
                     else
                         throw new Exception('Se ocuparon todas las butacas de la sala'); 
