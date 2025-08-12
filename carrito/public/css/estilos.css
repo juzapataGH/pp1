@@ -26,3 +26,29 @@ align-items: center;
     border-radius: 3px;
     font-weight: bold;
 }
+.productos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.producto{
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.imagen-producto{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.precio{
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+}
