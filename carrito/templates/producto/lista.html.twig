@@ -4,6 +4,9 @@
     <div class="head">
         <strong>Carrito de compras</strong>
         <div style="float: right;">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <p>Email: {{ app.user.email }}</p>
+        {% endif %}
             <button class="boton">Ver orden</button>
             <button class="boton">Salir</button>
 </div>
