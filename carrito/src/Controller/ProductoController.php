@@ -3,17 +3,16 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Repository\ProductoRepository;
+use App\Manager\ProductoManager;
 class ProductoController extends AbstractController
 {
     #[Route('/', name: 'listar_productos')] // http://localhost/pp1/carrito/public
-    public function listarProductos(ProductoRepository $repository): Response
+    public function listarProductos(ProductoManager $productoManager): Response
     {
-        $productos = $repository->findAll();
+        $productos = $productoManager->getProductos();
 
     return $this->render('producto/lista.html.twig', [
     'productos'=> $productos, ]);
     }
     }
-
     ?>
