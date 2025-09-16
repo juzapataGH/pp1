@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}Detalle del Producto{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 80vh; background-color: #f4f4f9;">
+        <div style="background: #fff; border-radius: 10px; padding: 30px; max-width: 500px; width: 100%; 
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-align: center;">
+            
+            <img src="{{ asset(producto.imagen) }}" alt="{{ producto.nombre }}" 
+                 style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
+
+            <h2 style="margin-bottom: 10px; font-size: 24px; color: #333;">{{ producto.nombre }}</h2>
+            
+            <p style="color: #666; font-size: 16px; margin-bottom: 15px;">{{ producto.descripcion }}</p>
+            
+            <p style="font-size: 18px; font-weight: bold; color: #28a745; margin-bottom: 25px;">
+                ${{ producto.precio }}
+            </p>
+
+            <a href="{{ path('listar_productos') }}" 
+               style="display: inline-block; padding: 10px 20px; background-color: #111; color: #fff; 
+                      border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+                ← Volver al listado 
+            </a>
+        </div>
+    </div>
+{% endblock %}
